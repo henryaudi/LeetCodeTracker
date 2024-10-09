@@ -22,5 +22,17 @@ public class ConfigUtils {
         }
     }
 
-    public static String getReadmeFilePath() { return properties.getProperty("readme.file.path"); }
+    public static String getReadmeFilePath() {
+        return properties.getProperty("readme.file.path");
+    }
+
+    public static String getLeetcodeLoginUrl() {
+        return properties.getProperty("leetcode.url.login");
+    }
+
+    public static String getLeetcodeApiUrl() {
+        return properties.getProperty("leetcode.url.api");
+    }
+
+
 }

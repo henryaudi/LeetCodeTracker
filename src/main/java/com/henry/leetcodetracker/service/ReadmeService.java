@@ -12,20 +12,11 @@ public class ReadmeService {
 
     private static final String README_FILE = ConfigUtils.getReadmeFilePath();
 
-    public void appendToReadme(Problem problem, int problemNo) throws IOException {
-
-        String newProblemRow = String.format("| %d %s", problemNo, problem.toMarkdownRow());
-
-        try (BufferedWriter writer =
-                     new BufferedWriter(new FileWriter(README_FILE, true))) {
-            writer.write(newProblemRow);
-        }
-
-        // Print system notice
-        System.out.println("Append problem #" + problem.getProblemId() + " successfully!");
-    }
-
     public int getNextProblemNo() throws IOException {
         return FileUtils.getNextProblemNo(README_FILE);
+    }
+
+    public void appendToReadme(Problem problem, int problemId) throws IOException {
+        FileUtils.appendToReadme(problem, problemId);
     }
 }

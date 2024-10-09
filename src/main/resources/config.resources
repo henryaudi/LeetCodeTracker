@@ -1,3 +1,6 @@
 # Path configurations
 readme.file.path=README.md
 
+# URL
+leetcode.url.login=https://leetcode.com/accounts/login/
+leetcode.url.api=https://leetcode.com/graphql
